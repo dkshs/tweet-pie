@@ -1,7 +1,8 @@
 import { FormEvent, SetStateAction, useState } from "react";
+import type { UserProps, PostProps } from "@/utils/types";
 
 import Image from "next/image";
-import { Post, PostProps } from "../Post";
+import { Post } from "../Post";
 import { ContentHeaderButton } from "./ContentHeaderButton";
 
 interface ContentProps {
@@ -9,7 +10,7 @@ interface ContentProps {
   setPosts: (value: SetStateAction<[] | PostProps[]>) => void;
 }
 
-const user = {
+const user: UserProps = {
   image:
     "https://auywbkryrhcmqbtmpqrj.supabase.co/storage/v1/object/public/spotlie/snowfall/cover.jpg",
   name: "DKSHS",

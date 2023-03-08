@@ -1,16 +1,9 @@
+import type { PostProps } from "@/utils/types";
+
 import Image from "next/image";
 
 import { FaRegComment, FaRegHeart } from "react-icons/fa";
 import { AiOutlineRetweet } from "react-icons/ai";
-
-export interface PostProps {
-  user: {
-    image: string;
-    username: string;
-    name: string;
-  };
-  content: string;
-}
 
 export function Post({ user, content }: PostProps) {
   return (

@@ -1,1 +1,1 @@
-export { Post, type PostProps } from "./Post";
+export { Post } from "./Post";

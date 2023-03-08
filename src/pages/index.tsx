@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import type { PostProps } from "@/components/Post";
+import type { PostProps } from "@/utils/types";
 
 import { Meta } from "@/components/Meta";
 import { Content } from "@/components/Content";
