@@ -7,12 +7,12 @@ import { CgMoreO } from "react-icons/cg";
 
 export function Sidebar() {
   return (
-    <header className="px-3 border-r border-gray-700 w-72">
+    <header className="px-3 w-[274px] fixed z-10">
       <Link
         href={"/"}
-        className="flex max-w-min rounded-full mb-2 p-3 hover:bg-blue-600/20 outline-none focus-visible:bg-blue-600/20 focus-visible:ring-2 ring-blue-300 duration-200"
+        className="flex max-w-min rounded-full mt-1 mb-2 p-3 hover:bg-blue-600/20 outline-none focus-visible:bg-blue-600/20 focus-visible:ring-2 ring-blue-300 duration-200"
       >
-        <BsTwitter size={32} />
+        <BsTwitter size={30} />
       </Link>
       <nav className="flex flex-col gap-2">
         {navItems.map((link, i) => (
@@ -36,6 +36,14 @@ export function Sidebar() {
           </div>
         </button>
       </nav>
+      <div className="my-4 w-[90%]">
+        <button
+          type="button"
+          className="py-3 px-8 rounded-full font-bold text-lg bg-sky-500 w-full outline-none shadow-lg shadow-sky-500/20 hover:bg-sky-600 focus-visible:ring ring-blue-300 duration-200"
+        >
+          Tweetar
+        </button>
+      </div>
     </header>
   );
 }
