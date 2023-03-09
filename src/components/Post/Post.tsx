@@ -2,8 +2,7 @@ import type { PostProps } from "@/utils/types";
 
 import Image from "next/image";
 
-import { FaRegComment, FaRegHeart } from "react-icons/fa";
-import { AiOutlineRetweet } from "react-icons/ai";
+import { Heart, ChatCircle, Repeat } from "@phosphor-icons/react";
 
 export function Post({ user, content }: PostProps) {
   return (
@@ -31,8 +30,9 @@ export function Post({ user, content }: PostProps) {
             className="flex items-center min-h-[20px] group outline-none"
           >
             <div className="relative flex items-center justify-center">
-              <FaRegComment
+              <ChatCircle
                 size={18}
+                weight="bold"
                 className="group-hover:text-sky-600 group-focus-visible:text-sky-600 duration-200"
               />
               <div className="absolute z-[-1] w-10 h-10 rounded-full border-2 border-transparent duration-300 group-hover:bg-sky-500/20 group-focus-visible:bg-sky-500/20 group-focus-visible:border-blue-300 group-active:bg-sky-500/30" />
@@ -46,8 +46,9 @@ export function Post({ user, content }: PostProps) {
             className="flex items-center min-h-[20px] group outline-none"
           >
             <div className="relative flex items-center justify-center">
-              <AiOutlineRetweet
+              <Repeat
                 size={18}
+                weight="bold"
                 className="group-hover:text-green-600 group-focus-visible:text-green-600 duration-200"
               />
               <div className="absolute z-[-1] w-10 h-10 rounded-full border-2 border-transparent duration-300 group-hover:bg-green-500/20 group-focus-visible:bg-green-500/20 group-focus-visible:border-green-300 group-active:bg-green-500/30" />
@@ -61,8 +62,9 @@ export function Post({ user, content }: PostProps) {
             className="flex items-center min-h-[20px] group outline-none"
           >
             <div className="relative flex items-center justify-center">
-              <FaRegHeart
+              <Heart
                 size={18}
+                weight="bold"
                 className="group-hover:text-pink-600 group-focus-visible:text-pink-600 duration-200"
               />
               <div className="absolute z-[-1] w-10 h-10 rounded-full border-2 border-transparent duration-300 group-hover:bg-pink-500/20 group-focus-visible:bg-pink-500/20 group-focus-visible:border-pink-300 group-active:bg-pink-500/30" />

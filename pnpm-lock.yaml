@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@ace-ex/eslint-config': ^1.1.0
+  '@phosphor-icons/react': ^2.0.5
   '@types/node': 18.14.2
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
@@ -12,18 +13,17 @@ specifiers:
   prettier: ^2.8.4
   react: 18.2.0
   react-dom: 18.2.0
-  react-icons: ^4.7.1
   tailwindcss: ^3.2.7
   typescript: 4.9.5
 
 dependencies:
+  '@phosphor-icons/react': 2.0.5_biqbaboplfbrettd7655fr4n2y
   '@types/node': 18.14.2
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   next: 13.2.3_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-icons: 4.7.1_react@18.2.0
 
 devDependencies:
   '@ace-ex/eslint-config': 1.1.0_64jebu3ilvs7epq3v3pc7ikc4m
@@ -265,6 +265,17 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
     dev: true
+
+  /@phosphor-icons/react/2.0.5_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-Ghohi+Dk+Y0RoI1vra3jH2QC3sO6C16a/Km0gfy05ONIsC62Vwn1SK2Qaim77VPyn1FS7qjMxocdi9kx6btvXg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>= 16.8'
+      react-dom: '>= 16.8'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /@pkgr/utils/2.3.1:
     resolution: {integrity: sha512-wfzX8kc1PMyUILA+1Z/EqoE4UCXGy0iRGMhPwdfae1+f0OXlLqCk+By+aMzgJBzR9AzS4CDizioG6Ss1gvAFJw==}
@@ -2390,14 +2401,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
-
-  /react-icons/4.7.1_react@18.2.0:
-    resolution: {integrity: sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==}
-    peerDependencies:
-      react: '*'
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:

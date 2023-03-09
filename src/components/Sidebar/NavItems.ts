@@ -1,38 +1,41 @@
-import { BsFillHouseDoorFill } from "react-icons/bs";
-import { HiOutlineHashtag, HiOutlineUser } from "react-icons/hi";
-import { RiNotification2Line } from "react-icons/ri";
-import { FiMail } from "react-icons/fi";
-import { FaRegBookmark } from "react-icons/fa";
+import {
+  House,
+  Hash,
+  Bell,
+  EnvelopeSimple,
+  BookmarkSimple,
+  User,
+} from "@phosphor-icons/react";
 
 export const navItems = [
   {
     title: "Página inicial",
     href: "/",
-    icon: BsFillHouseDoorFill,
+    icon: House,
   },
   {
     title: "Explorar",
     href: "#",
-    icon: HiOutlineHashtag,
+    icon: Hash,
   },
   {
     title: "Notificações",
     href: "#",
-    icon: RiNotification2Line,
+    icon: Bell,
   },
   {
     title: "Mensagens",
     href: "#",
-    icon: FiMail,
+    icon: EnvelopeSimple,
   },
   {
     title: "Itens salvos",
     href: "#",
-    icon: FaRegBookmark,
+    icon: BookmarkSimple,
   },
   {
     title: "Perfil",
     href: "#",
-    icon: HiOutlineUser,
+    icon: User,
   },
 ];

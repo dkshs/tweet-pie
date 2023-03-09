@@ -1,11 +1,15 @@
+import { useRouter } from "next/router";
+
 import { navItems } from "./NavItems";
 
 import Link from "next/link";
-
-import { CgMoreO } from "react-icons/cg";
 import { Logo } from "../Logo";
 
+import { DotsThreeCircle } from "@phosphor-icons/react";
+
 export function Sidebar() {
+  const router = useRouter();
+
   return (
     <header className="px-3 w-[274px] fixed z-10">
       <Link
@@ -22,8 +26,17 @@ export function Sidebar() {
             className="flex items-center text-xl group outline-none"
           >
             <div className="flex items-center py-3 px-4 rounded-full group-hover:bg-gray-500/20 group-focus-visible:ring-2 ring-white duration-200">
-              <link.icon size={26} />
-              <span className="ml-5 mr-4">{link.title}</span>
+              <link.icon
+                size={26}
+                weight={router.pathname === link.href ? "fill" : "bold"}
+              />
+              <span
+                className={`ml-5 mr-4 ${
+                  router.pathname === link.href && "font-bold"
+                }`}
+              >
+                {link.title}
+              </span>
             </div>
           </Link>
         ))}
@@ -32,7 +45,8 @@ export function Sidebar() {
           className="flex items-center text-xl group outline-none"
         >
           <div className="flex items-center py-3 px-4 rounded-full group-hover:bg-gray-500/20 group-focus-visible:ring-2 ring-white duration-200">
-            <CgMoreO size={26} /> <span className="ml-5 mr-4">Mais</span>
+            <DotsThreeCircle size={26} />
+            <span className="ml-5 mr-4">Mais</span>
           </div>
         </button>
       </nav>
