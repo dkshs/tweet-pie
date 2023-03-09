@@ -2,8 +2,8 @@ import { navItems } from "./NavItems";
 
 import Link from "next/link";
 
-import { BsTwitter } from "react-icons/bs";
 import { CgMoreO } from "react-icons/cg";
+import { Logo } from "../Logo";
 
 export function Sidebar() {
   return (
@@ -12,7 +12,7 @@ export function Sidebar() {
         href={"/"}
         className="flex max-w-min rounded-full mt-1 mb-2 p-3 hover:bg-blue-600/20 outline-none focus-visible:bg-blue-600/20 focus-visible:ring-2 ring-blue-300 duration-200"
       >
-        <BsTwitter size={30} />
+        <Logo size={30} />
       </Link>
       <nav className="flex flex-col gap-2">
         {navItems.map((link, i) => (
