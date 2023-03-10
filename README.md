@@ -6,7 +6,7 @@ A project based on Twitter.
 
 - [Next.Js](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [React Icons](https://react-icons.github.io/react-icons)
+- [Phosphor Icons](https://phosphoricons.com/)
 
 ## How to run the project
 
