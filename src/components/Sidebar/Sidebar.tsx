@@ -25,7 +25,7 @@ export function Sidebar() {
             href={link.href}
             className="flex items-center text-xl group outline-none"
           >
-            <div className="flex items-center py-3 px-4 rounded-full group-hover:bg-gray-500/20 group-focus-visible:ring-2 ring-white duration-200">
+            <div className="flex items-center py-3 px-3 rounded-full group-hover:bg-gray-500/20 group-focus-visible:ring-2 ring-white duration-200">
               <link.icon
                 size={26}
                 weight={router.pathname === link.href ? "fill" : "bold"}
@@ -44,7 +44,7 @@ export function Sidebar() {
           type="button"
           className="flex items-center text-xl group outline-none"
         >
-          <div className="flex items-center py-3 px-4 rounded-full group-hover:bg-gray-500/20 group-focus-visible:ring-2 ring-white duration-200">
+          <div className="flex items-center py-3 px-3 rounded-full group-hover:bg-gray-500/20 group-focus-visible:ring-2 ring-white duration-200">
             <DotsThreeCircle size={26} />
             <span className="ml-5 mr-4">Mais</span>
           </div>
