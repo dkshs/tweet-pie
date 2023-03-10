@@ -33,6 +33,7 @@ export function Content({ posts }: ContentProps) {
           />
         </div>
       </div>
+      <div className="mt-28" />
       <TweetForm />
       <div>
         {posts.map((post, i) => (

@@ -5,6 +5,11 @@ import type { UserProps } from "@/utils/types";
 
 import Image from "next/image";
 
+interface TweetFormProps {
+  className?: string;
+  setModalState?: (value: boolean) => void;
+}
+
 const user: UserProps = {
   image:
     "https://auywbkryrhcmqbtmpqrj.supabase.co/storage/v1/object/public/spotlie/snowfall/cover.jpg",
@@ -12,7 +17,7 @@ const user: UserProps = {
   username: "@DK_ShSs",
 };
 
-export function TweetForm() {
+export function TweetForm({ className, setModalState }: TweetFormProps) {
   const [typedPost, setTypedPost] = useState("");
   const { setPosts } = usePost();
 
@@ -24,12 +29,13 @@ export function TweetForm() {
         return [...prevPosts, post];
       });
       setTypedPost("");
+      setModalState && setModalState(false);
     }
   }
 
   return (
     <form
-      className="flex flex-col pt-28 pb-2 border-b border-zinc-700 px-4"
+      className={`flex flex-col pb-2 border-b border-zinc-700 px-4 ${className}`}
       onSubmit={handleSubmitPost}
     >
       <label className="flex gap-2" htmlFor="tweet">

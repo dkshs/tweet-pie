@@ -4,6 +4,7 @@ import { navItems } from "./NavItems";
 
 import Link from "next/link";
 import { Logo } from "../Logo";
+import { TweetButton } from "./TweetButton";
 
 import { DotsThreeCircle } from "@phosphor-icons/react";
 
@@ -50,14 +51,7 @@ export function Sidebar() {
           </div>
         </button>
       </nav>
-      <div className="my-4 w-[90%]">
-        <button
-          type="button"
-          className="py-3 px-8 rounded-full font-bold text-lg bg-sky-500 w-full outline-none shadow-lg shadow-sky-500/20 hover:bg-sky-600 focus-visible:ring ring-blue-300 duration-200"
-        >
-          Tweetar
-        </button>
-      </div>
+      <TweetButton />
     </header>
   );
 }
