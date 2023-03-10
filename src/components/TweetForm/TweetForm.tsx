@@ -50,6 +50,8 @@ export function TweetForm({ className, setModalState }: TweetFormProps) {
         </div>
         <textarea
           id="tweet"
+          // eslint-disable-next-line jsx-a11y/no-autofocus
+          autoFocus={setModalState && true}
           className="mt-3 flex-1 resize-none bg-transparent text-lg outline-none"
           placeholder="O que está acontecendo?"
           onChange={(e) => setTypedPost(e.target.value)}

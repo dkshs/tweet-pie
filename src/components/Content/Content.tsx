@@ -34,7 +34,7 @@ export function Content({ posts }: ContentProps) {
         </div>
       </div>
       <div className="mt-28" />
-      <TweetForm />
+      <TweetForm className="hidden xs:flex" />
       <div>
         {posts.map((post, i) => (
           <Post key={i} {...post} />
