@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import type { PostProps } from "@/utils/types";
 
 import { Post } from "../Post";
@@ -7,14 +7,12 @@ import { TweetForm } from "../TweetForm";
 
 interface ContentProps {
   posts: PostProps[];
-  setPosts: (value: SetStateAction<[] | PostProps[]>) => void;
 }
 
-export function Content({ posts, setPosts }: ContentProps) {
+export function Content({ posts }: ContentProps) {
   const [currentTab, setCurrentTab] = useState<"For you" | "Following">(
     "For you",
   );
-  const [typedPost, setTypedPost] = useState("");
 
   return (
     <>
@@ -35,11 +33,7 @@ export function Content({ posts, setPosts }: ContentProps) {
           />
         </div>
       </div>
-      <TweetForm
-        setPosts={setPosts}
-        setTypedPost={setTypedPost}
-        typedPost={typedPost}
-      />
+      <TweetForm />
       <div>
         {posts.map((post, i) => (
           <Post key={i} {...post} />

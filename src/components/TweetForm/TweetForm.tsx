@@ -1,13 +1,9 @@
-import type { FormEvent, SetStateAction } from "react";
-import type { UserProps, PostProps } from "@/utils/types";
+import { usePost } from "@/hooks/usePost";
+
+import { FormEvent, useState } from "react";
+import type { UserProps } from "@/utils/types";
 
 import Image from "next/image";
-
-interface TweetFormProps {
-  typedPost: string;
-  setTypedPost: (value: SetStateAction<string>) => void;
-  setPosts: (value: SetStateAction<[] | PostProps[]>) => void;
-}
 
 const user: UserProps = {
   image:
@@ -16,11 +12,10 @@ const user: UserProps = {
   username: "@DK_ShSs",
 };
 
-export function TweetForm({
-  typedPost,
-  setTypedPost,
-  setPosts,
-}: TweetFormProps) {
+export function TweetForm() {
+  const [typedPost, setTypedPost] = useState("");
+  const { setPosts } = usePost();
+
   function handleSubmitPost(e: FormEvent) {
     e.preventDefault();
     const post = { user, content: typedPost };

@@ -1,17 +1,15 @@
-import { useState } from "react";
-
-import type { PostProps } from "@/utils/types";
+import { usePost } from "@/hooks/usePost";
 
 import { Meta } from "@/components/Meta";
 import { Content } from "@/components/Content";
 
 export default function Home() {
-  const [posts, setPosts] = useState<PostProps[] | []>([]);
+  const { posts } = usePost();
 
   return (
     <>
       <Meta title="Página inicial" path="/" />
-      <Content posts={posts} setPosts={setPosts} />
+      <Content posts={posts} />
     </>
   );
 }
