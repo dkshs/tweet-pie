@@ -1,35 +1,39 @@
 import { usePost } from "@/hooks/usePost";
 
 import { FormEvent, useState } from "react";
-import type { UserProps } from "@/utils/types";
 
 import Image from "next/image";
+import { useUser } from "@/hooks/useUser";
 
 interface TweetFormProps {
   className?: string;
   setModalState?: (value: boolean) => void;
 }
 
-const user: UserProps = {
-  image:
-    "https://auywbkryrhcmqbtmpqrj.supabase.co/storage/v1/object/public/spotlie/snowfall/cover.jpg",
-  name: "DKSHS",
-  username: "@DK_ShSs",
-};
-
 export function TweetForm({ className, setModalState }: TweetFormProps) {
   const [typedPost, setTypedPost] = useState("");
   const { setPosts } = usePost();
+  const { user } = useUser();
+
+  function randomNumber() {
+    const random = Math.random() * 100;
+    const arrayRandom = random.toString().split(".");
+    return arrayRandom.join("");
+  }
 
   function handleSubmitPost(e: FormEvent) {
     e.preventDefault();
-    const post = { user, content: typedPost };
     if (typedPost.trim().length !== 0) {
-      setPosts((prevPosts) => {
-        return [...prevPosts, post];
-      });
-      setTypedPost("");
-      setModalState && setModalState(false);
+      if (user) {
+        const post = { id: randomNumber(), user, content: typedPost };
+        setPosts((prevPosts) => {
+          return [...prevPosts, post];
+        });
+        setTypedPost("");
+        setModalState && setModalState(false);
+      } else {
+        alert("User not found!");
+      }
     }
   }
 
@@ -41,7 +45,7 @@ export function TweetForm({ className, setModalState }: TweetFormProps) {
       <label className="flex gap-2" htmlFor="tweet">
         <div className="pt-1 mr-1">
           <Image
-            src="https://auywbkryrhcmqbtmpqrj.supabase.co/storage/v1/object/public/spotlie/snowfall/cover.jpg"
+            src={user?.image || ""}
             alt="logo"
             width={48}
             height={48}

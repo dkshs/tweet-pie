@@ -1,12 +1,16 @@
 import type { PostProps } from "@/utils/types";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { Heart, ChatCircle, Repeat } from "@phosphor-icons/react";
 
-export function Post({ user, content }: PostProps) {
+export function Post({ user, content, id }: PostProps) {
   return (
-    <div className="py-2.5 px-4 flex border-b border-zinc-700">
+    <Link
+      href={`/status/${id}`}
+      className="py-2.5 px-4 flex border-b border-zinc-700"
+    >
       <div className="flex w-12 h-12 aspect-square mr-3">
         <Image
           src={user.image}
@@ -75,6 +79,6 @@ export function Post({ user, content }: PostProps) {
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
