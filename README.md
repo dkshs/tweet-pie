@@ -15,7 +15,7 @@ To run the project you need to have [Node.js](https://nodejs.dev/) and [Git](htt
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ShadowsS01/tweet-pie.git
+git clone https://github.com/dkshs/tweet-pie.git
 ```
 
 ### 2. Access the project folder
